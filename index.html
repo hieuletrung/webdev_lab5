@@ -6,57 +6,41 @@
   <title>WebDev Lab 5 Form</title>
 </head>
 <body>
+  <h1>Volunteer Form</h1>
   <form action="http://bloomingdale.sat.iit.edu/kriedan/lab3formscript.php" method="POST">
     <fieldset>
-      <legend>Personal Information</legend>
-      <label for="first_name_field">First Name:</label>
-      <input type="text" id="first_name_field" name="first_name_field" required><br><br>
-
-      <label for="last_name_field">Last Name:</label>
-      <input type="text" id="last_name_field" name="last_name_field" required><br><br>
-
-      <label for="phone_field">Phone:</label>
-      <input type="tel" id="phone_field" name="phone_field" required><br><br>
-
-      <label for="email_field">Email:</label>
-      <input type="email" id="email_field" name="email_field" required><br><br>
+      <legend>My Info</legend>
+      <div><label>first name: <input size="100" type="text" name="first_name_field"></label></div>
+      <div><label>last name: <input size="100" type="text" name="last_name_field"></label></div>
+      <div><label>phone: <input size="100" type="text" name="phone_field"></label></div>
+      <div><label>email: <input size="100" type="text" name="email_field"></label></div>
+      <div>Gender: </div>
+      <div>
+        <label>Male <input type="radio" name="gender_field" value="male"></label>
+        <label>Female <input type="radio" name="gender_field" value="female"></label>
+      </div>
+      <div>Age: </div>
+      <select name="age_field">
+        <option>under 18</option>
+        <option>over 18</option>
+      </select>
     </fieldset>
-
     <fieldset>
-      <legend>Additional Information</legend>
-      <label for="comments_field">Comments:</label><br>
-      <textarea id="comments_field" name="comments_field" rows="4" cols="50"></textarea><br><br>
-
-      <label for="age_field">Age:</label>
-      <select id="age_field" name="age_field">
-        <option value="under_18">Under 18</option>
-        <option value="18_24">18-24</option>
-        <option value="25_34">25-34</option>
-        <option value="35_44">35-44</option>
-        <option value="45_54">45-54</option>
-        <option value="55_64">55-64</option>
-        <option value="65_over">65 or over</option>
-      </select><br><br>
-
-      <label>Gender:</label><br>
-      <input type="radio" id="gender_male" name="gender_field" value="male">
-      <label for="gender_male">Male</label><br>
-      <input type="radio" id="gender_female" name="gender_field" value="female">
-      <label for="gender_female">Female</label><br>
-      <input type="radio" id="gender_other" name="gender_field" value="other">
-      <label for="gender_other">Other</label><br><br>
-
-      <label>Available:</label><br>
-      <input type="checkbox" id="available_morning" name="available_field[]" value="morning">
-      <label for="available_morning">Morning</label><br>
-      <input type="checkbox" id="available_afternoon" name="available_field[]" value="afternoon">
-      <label for="available_afternoon">Afternoon</label><br>
-      <input type="checkbox" id="available_evening" name="available_field[]" value="evening">
-      <label for="available_evening">Evening</label><br><br>
+      <legend>My Availability</legend>
+      <h3>Days Available:</h3>
+      <div>
+        <div><label>Sunday <input type="checkbox" name="available_field[]" value="sunday"></label></div>
+        <div><label>Monday <input type="checkbox" name="available_field[]" value="monday"></label></div>
+        <div><label>Tuesday <input type="checkbox" name="available_field[]" value="tuesday"></label></div>
+        <div><label>Wednesday <input type="checkbox" name="available_field[]" value="wednesday"></label></div>
+        <div><label>Thursday <input type="checkbox" name="available_field[]" value="thursday"></label></div>
+        <div><label>Friday <input type="checkbox" name="available_field[]" value="friday"></label></div>
+        <div><label>Saturday <input type="checkbox" name="available_field[]" value="saturday"></label></div>
+        <h3>Comments</h3>
+        <textarea name="comments_field"></textarea>
+      </div>
     </fieldset>
-
-    <input type="hidden" name="hidden_field" value="Your Name">
-
+    <input type="hidden" name="hidden_field" value="Hieu Le">
     <input type="submit" value="Submit">
   </form>
 </body>
